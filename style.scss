@@ -1,8 +1,10 @@
 @use '@carbon/styles/scss/reset';
 @use '@carbon/styles/scss/theme' as *;
 @use '@carbon/styles/scss/themes';
-@use '@carbon/styles/scss/spacing' as *; /* near top of file */
-@use '@carbon/styles/scss/type' as *; /* place at top of file */
+@use '@carbon/styles/scss/spacing' as *;
+/* near top of file */
+@use '@carbon/styles/scss/type' as *;
+/* place at top of file */
 @use '@carbon/styles/scss/grid';
 @use '@carbon/styles/scss/breakpoint' as *;
 
@@ -105,7 +107,7 @@ cds-content-switcher-item[selected] .theme-selector__icon {
 .page {
   padding: 0;
 
-  > * {
+  >* {
     padding-inline: $spacing-06;
     margin: 0;
   }
@@ -165,4 +167,24 @@ cds-content-switcher-item[selected] .theme-selector__icon {
 
 .repo-page__r1 {
   padding-block: $spacing-05;
+}
+
+
+.link-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.link-list li:not(:last-child) {
+  padding-inline-end: $spacing-02;
+
+  &::after {
+    content: '|';
+    display: inline;
+  }
+}
+
+.link-list li:not(:first-child) {
+  padding-left: $spacing-02;
 }
